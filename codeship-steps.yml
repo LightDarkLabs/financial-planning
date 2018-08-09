@@ -1,0 +1,24 @@
+- name: Install Node Dependencies
+  service: node
+  command: yarn install
+
+- name: Run Tests
+  type: parallel
+  steps:
+
+  - name: Check for Linting Issues
+    service: node
+    command: yarn eslint src
+
+  - name: Run Yarn Test Runner
+    service: node
+    command: yarn run jest -- --color --coverage --detectOpenHandles --forceExit
+
+- name: Build Application
+  service: node
+  command: yarn build
+
+- name: Push to Google Firebase
+  service: firebase
+  tag: master
+  command: bash -c "firebase deploy --token ${FIREBASE_TOKEN} --only hosting"

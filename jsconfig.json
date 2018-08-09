@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@actions/*": ["src/actions/*"],
+      "@models/*": ["src/models/*"],
+      "@components/*": ["src/components/*"],
+      "@scenes/*": ["src/scenes/*"],
+      "@stores/*": ["src/stores/*"],
+      "@services/*": ["src/services/*"],
+      "@forms/*": ["src/forms/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
