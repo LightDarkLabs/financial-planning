@@ -7,6 +7,7 @@
       "@actions/*": ["src/actions/*"],
       "@models/*": ["src/models/*"],
       "@components/*": ["src/components/*"],
+      "@routes/*": ["src/routes/*"],
       "@scenes/*": ["src/scenes/*"],
       "@stores/*": ["src/stores/*"],
       "@services/*": ["src/services/*"],

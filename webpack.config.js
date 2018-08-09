@@ -10,14 +10,14 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   inject: 'body',
 })
 
-const DefinePluginConfig = new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production')  })
+const DefinePluginConfig = new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('production') })
 
 module.exports = {
   devServer: {
     host: 'localhost',
     port: '3000',
     hot: false,
-    headers: { 'Access-Control-Allow-Origin': '*'  },
+    headers: { 'Access-Control-Allow-Origin': '*' },
     historyApiFallback: true,
   },
   entry: ['react-hot-loader/patch', path.join(__dirname, '/src/index.jsx')],
@@ -35,7 +35,7 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'url-loader',
-        options: { limit: 10000  },
+        options: { limit: 10000 },
       },
     ],
   },
@@ -46,6 +46,7 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@scenes': path.resolve(__dirname, 'src/scenes/'),
       '@models': path.resolve(__dirname, 'src/models/'),
+      '@routes': path.resolve(__dirname, 'src/routes/'),
       '@stores': path.resolve(__dirname, 'src/stores/'),
       '@services': path.resolve(__dirname, 'src/services/'),
     }
