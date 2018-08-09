@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`serializes 1`] = `
+Object {
+  "ItemStore": Object {
+    "items": Array [],
+  },
+}
+`;
