@@ -4,6 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import Root from './Root'
+import './theme/stylesheets/app.scss'
 
 const root = document.getElementById('root')
 
