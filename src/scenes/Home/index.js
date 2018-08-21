@@ -13,24 +13,26 @@ const TableHeadComponent = () => (
 )
 
 const RowComponent = ({ item, ...props }) => (
-  <tr {...props}>
+  <tr className="wee" {...props}>
     <td>{item.name || 'asdlfkj'}</td>
     <td>{item.date.toUTCString()}</td>
     <td>{item.value.cents}</td>
   </tr>
 )
 
-const ExpandedRowComponent = ({ item, ...props }) => (
-  <tr {...props}>
-    <td colSpan={3}>
-      <div />
-    </td>
+
+const ExpandedRowComponent = ({ item }) => (
+  <tr className="wee" colSpan={3}>
+    <div >
+      <h1>{item.name}</h1>
+      <p>laksdjf</p>
+    </div>
   </tr>
 )
 
 const Home = ({ store }) => (
   <div>
-    <h1>Financial Planning</h1>
+    {/* <h1>Financial Planning</h1> */}
 
     <ExpandableTable
       id="expenses"

@@ -1,5 +1,36 @@
 // @import "meyer-reset.scss";
 // @import "layout";
 // // @import "../../../node_modules/bootstrap/scss/bootstrap"
-@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
+.cross-fade-leave {
+  opacity: 1;
+  transition: 1s ease-in;
+}
+
+.cross-fade-leave.cross-fade-leave-active {
+  opacity: 0;
+  transition: 0.1s ease-in;
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.cross-fade-enter {
+  opacity: 0;
+  transition: 1s ease-in;
+}
+
+.cross-fade-enter.cross-fade-enter-active {
+  opacity: 1;
+  transition: 1s ease-in;
+}
+
+.cross-fade-height {
+  transition: .5s ease-in-out;
+}
+
+.wee {
+  position: relative;
+  overflow: hidden;
+}
